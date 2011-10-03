@@ -9,10 +9,7 @@ static int my_init(void)
 
 static void my_exit(void)
 {
-	char* p = (kmalloc(1000, GFP_KERNEL));
-	strcpy(p, "Bye R");
-	printk(KERN_INFO "%s\n%h\n", p, p);
-	kfree(p);
+			
 }
 
 module_init(my_init);

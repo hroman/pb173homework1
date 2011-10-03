@@ -1,8 +1,8 @@
-cmd_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o := gcc -Wp,-MD,/home/hrom/Dokumenty/skola/pb173linux/pb173/01/.pb173.o.d  -nostdinc -isystem /usr/lib/i386-linux-gnu/gcc/i686-linux-gnu/4.5.2/include  -I/usr/src/linux-headers-2.6.38-11-generic/arch/x86/include -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(pb173)"  -D"KBUILD_MODNAME=KBUILD_STR(pb173)" -c -o /home/hrom/Dokumenty/skola/pb173linux/pb173/01/.tmp_pb173.o /home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.c
+cmd_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := gcc -Wp,-MD,/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/.pb173.o.d  -nostdinc -isystem /usr/lib/i386-linux-gnu/gcc/i686-linux-gnu/4.5.2/include  -I/usr/src/linux-headers-2.6.38-11-generic/arch/x86/include -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(pb173)"  -D"KBUILD_MODNAME=KBUILD_STR(pb173)" -c -o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/.tmp_pb173.o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.c
 
-source_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o := /home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.c
+source_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.c
 
-deps_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o := \
+deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
     $(wildcard include/config/sysfs.h) \
@@ -489,6 +489,6 @@ deps_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o := \
   include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
 
-/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o: $(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o)
+/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o: $(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o)
 
-$(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173/01/pb173.o):
+$(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o):

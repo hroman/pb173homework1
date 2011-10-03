@@ -18,10 +18,6 @@ static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
 	{ 0x60d90935, "module_layout" },
-	{ 0x37a0cba, "kfree" },
-	{ 0xe914e41e, "strcpy" },
-	{ 0xba236513, "kmem_cache_alloc_trace" },
-	{ 0xc6177942, "kmalloc_caches" },
 	{ 0x50eedeb8, "printk" },
 	{ 0xb4390f9a, "mcount" },
 };
@@ -32,4 +28,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "C49B217B4DA3FBDBD29A01C");
+MODULE_INFO(srcversion, "E69CBABD101DB67C54F820B");
