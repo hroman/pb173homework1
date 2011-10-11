@@ -1,8 +1,9 @@
-cmd_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := gcc -Wp,-MD,/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/.pb173.o.d  -nostdinc -isystem /usr/lib/i386-linux-gnu/gcc/i686-linux-gnu/4.5.2/include  -I/usr/src/linux-headers-2.6.38-11-generic/arch/x86/include -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(pb173)"  -D"KBUILD_MODNAME=KBUILD_STR(pb173)" -c -o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/.tmp_pb173.o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.c
+cmd_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o := gcc -Wp,-MD,/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/.pb173.mod.o.d  -nostdinc -isystem /usr/lib/i386-linux-gnu/gcc/i686-linux-gnu/4.5.2/include  -I/usr/src/linux-headers-2.6.38-11-generic/arch/x86/include -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(pb173.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(pb173)" -DMODULE  -c -o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.c
 
-source_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.c
+source_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o := /home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.c
 
-deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := \
+deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o := \
+    $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
     $(wildcard include/config/sysfs.h) \
@@ -16,7 +17,6 @@ deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/event/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/debug/set/module/ronx.h) \
   include/linux/list.h \
@@ -476,29 +476,9 @@ deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o := \
   include/asm-generic/module.h \
   include/trace/events/module.h \
   include/trace/define_trace.h \
-  include/linux/slab.h \
-    $(wildcard include/config/slab/debug.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/slub.h) \
-    $(wildcard include/config/slob.h) \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/slab.h) \
-  include/linux/slub_def.h \
-    $(wildcard include/config/slub/stats.h) \
-    $(wildcard include/config/slub/debug.h) \
-  include/linux/kmemleak.h \
-    $(wildcard include/config/debug/kmemleak.h) \
-  include/linux/device.h \
-    $(wildcard include/config/of.h) \
-    $(wildcard include/config/debug/devres.h) \
-    $(wildcard include/config/devtmpfs.h) \
-    $(wildcard include/config/sysfs/deprecated.h) \
-  include/linux/klist.h \
-  /usr/src/linux-headers-2.6.38-11-generic/arch/x86/include/asm/device.h \
-    $(wildcard include/config/dmar.h) \
-    $(wildcard include/config/amd/iommu.h) \
-  include/linux/pm_wakeup.h \
+  include/linux/vermagic.h \
+  include/generated/utsrelease.h \
 
-/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o: $(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o)
+/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o: $(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o)
 
-$(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pb173.o):
+$(deps_/home/hrom/Dokumenty/skola/pb173linux/pb173homework1/01/pamet_ukol/pb173.mod.o):

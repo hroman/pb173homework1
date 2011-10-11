@@ -20,8 +20,6 @@ __attribute__((section("__versions"))) = {
 	{ 0x60d90935, "module_layout" },
 	{ 0xe914e41e, "strcpy" },
 	{ 0x37a0cba, "kfree" },
-	{ 0x331ad63b, "bus_register" },
-	{ 0x7d11c268, "jiffies" },
 	{ 0xba236513, "kmem_cache_alloc_trace" },
 	{ 0xc6177942, "kmalloc_caches" },
 	{ 0x50eedeb8, "printk" },
@@ -34,4 +32,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "35C9E0B5112C7A30B04C1DA");
+MODULE_INFO(srcversion, "31FE5532F0239F97A9C4681");
