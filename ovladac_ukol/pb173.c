@@ -3,10 +3,28 @@
 #include <linux/uaccess.h>
 #include <linux/fs.h>
 #include <linux/miscdevice.h>
+#include <linux/slab.h>
+#include <linux/device.h>
 
-int info = 0; 
+int info = 0; 		//characters to write
+int write = 0;		//is any proccess writting?
+DEFINE_MUTEX(my_mut);	//mutex
 
 int my_open ( struct inode *inode , struct file * filp ) {
+	int i;
+	i = (filp->f_mode & FMODE_WRITE);
+	if ( i != 0)
+	{
+		mutex_lock(&my_mut);
+		if (write == 0)			
+			write++;		
+		else 
+		{
+			mutex_unlock(&my_mut);		
+			return -EFAULT; 
+		}	
+	}
+	mutex_unlock(&my_mut);
 	printk(KERN_INFO "modul otevren\n");		
 	return 0;
 }
@@ -16,9 +34,14 @@ ssize_t my_write ( struct file * filp , const char __user *buf , size_t
 {	
 	char mem[100];
 	if (count > 100)
-		return -EFAULT;
+		count = 100;
+	mutex_lock(&my_mut);
 	if (copy_from_user(mem, buf, count))
+	{
+		mutex_unlock(&my_mut);
 		return -EFAULT;
+	}
+	mutex_unlock(&my_mut);
 	printk(KERN_INFO "buffer = %s\n", mem);
 	return count;
 }
@@ -28,15 +51,30 @@ ssize_t my_read ( struct file * filp , char __user *buf , size_t
 {
 	unsigned long i;
 	char mem[100] = "ahoj";
+	mutex_lock(&my_mut);
 	i = (info == 0) ? count : info;	
 	if (i > 100)
+	{
+		mutex_unlock(&my_mut);	
 		return -EFAULT;
+	}
 	if (copy_to_user(buf, mem, i))
+	{
+		mutex_unlock(&my_mut);	
 		return -EFAULT;
+	}
+	mutex_unlock(&my_mut);	
 	return i;
 }
 
 int my_release ( struct inode *inode , struct file * filp ) {
+	//check if process is writer
+	if (write != 0 && ( (filp->f_mode & FMODE_WRITE) != 0))
+	{
+		mutex_lock(&my_mut);
+		write = 0;
+		mutex_unlock(&my_mut);
+	} 
 	printk(KERN_INFO "modul uvolnen\n");
 	return 0;
 }
@@ -53,8 +91,10 @@ long my_unlocked_ioctl( struct file *filp, unsigned int cmd, unsigned long arg)
 	}
 	if (cmd == 2)
 	{
+		mutex_lock(&my_mut);
 		i = info;
 		put_user(i, (int*)arg); 
+		mutex_unlock(&my_mut);
 		printk(KERN_INFO "info in cmd=2 = %u\n", info);	
 		return ret;
 	}	
