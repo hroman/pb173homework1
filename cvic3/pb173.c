@@ -76,7 +76,7 @@ ssize_t my_read2 ( struct file * filp , const char __user *buf , size_t
 		count = 128;
 	
 	mutex_lock(&my_mut2);
-	if (copy_to_user(buf, mem, count))
+	if (copy_to_user((void*)buf, mem, count))
 	{
 		mutex_unlock(&my_mut2);
 		return -EFAULT;
