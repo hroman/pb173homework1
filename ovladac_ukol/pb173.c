@@ -85,15 +85,17 @@ long my_unlocked_ioctl( struct file *filp, unsigned int cmd, unsigned long arg)
 	unsigned int i;
 	if (cmd == 1)
 	{	
+		mutex_lock(&my_mut);
 		info = (int)arg;
 		printk(KERN_INFO "info in cmd=1 = %u\n", info);	
+		mutex_unlock(&my_mut);
 		return ret;		
 	}
 	if (cmd == 2)
 	{
 		mutex_lock(&my_mut);
 		i = info;
-		put_user(i, (int*)arg); 
+		ret = put_user(i, (int*)arg); 
 		mutex_unlock(&my_mut);
 		printk(KERN_INFO "info in cmd=2 = %u\n", info);	
 		return ret;

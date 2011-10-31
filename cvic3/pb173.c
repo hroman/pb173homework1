@@ -29,7 +29,7 @@ ssize_t my_write1 ( struct file * filp , const char __user *buf , size_t
 	for(i=0; i<count; i++)
 	{
 		//offp chech - offp position in buffer to write
-		if (*offp >= strlen(mem))
+		if (*offp >= 128)
 			break;
 		if (get_user(mem[*offp], &buf[i]))
 		{
